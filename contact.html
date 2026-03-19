@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Hubungi Kami</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Kelab Inovasi & Rekacipta</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="projects.html">Projek</a></li>
+            <li><a href="events.html">Aktiviti</a></li>
+            <li><a href="contact.html">Hubungi</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="contact">
+    <h2>Hubungi Kami</h2>
+
+    <!-- WELCOME NOTE -->
+    <p style="font-size:1.2em; font-weight:bold; color:#444; margin-bottom:20px;">
+        Terima kasih kerana menghubungi kami! Sila isi borang di bawah.
+    </p>
+
+    <!-- CONTACT FORM -->
+    <form id="contactForm">
+        <input type="text" placeholder="Nama" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mesej" rows="5" required></textarea>
+        <button type="submit">Hantar</button>
+    </form>
+
+    <!-- THANK YOU MESSAGE -->
+    <p id="thankMessage" style="display:none; color:green; font-weight:bold; margin-top:20px;">
+        Terima kasih kerana menghubungi kami. Kami akan membalas secepat mungkin.
+    </p>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Kelab Inovasi & Rekacipta. Semua Hak Cipta Terpelihara.</p>
+</footer>
+
+<!-- JAVASCRIPT FOR FORM SUBMIT -->
+<script>
+    const form = document.getElementById('contactForm');
+    const thankMsg = document.getElementById('thankMessage');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // prevent actual submit
+        form.style.display = 'none'; // hide form
+        thankMsg.style.display = 'block'; // show thank you message
+    });
+</script>
+
+</body>
+</html>
